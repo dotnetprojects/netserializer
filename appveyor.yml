@@ -11,6 +11,9 @@ assembly_info:
 
 configuration: Debug
 
+before_build:
+  - nuget restore
+
 build:
   project: NetSerializer.sln
 
