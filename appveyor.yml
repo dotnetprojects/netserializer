@@ -1,0 +1,37 @@
+branches:
+  only:
+    - master
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+configuration: Debug
+
+build:
+  project: NetSerializer.sln
+
+after_build:
+  - ps: .\nuget\pack.ps1
+
+test: on
+
+artifacts:
+  - path: NetSerializer\bin\Debug\NetSerializer.dll
+    name: NetSerializer.dll
+  - path: NetSerializer\bin\Debug\NetSerializer.pdb
+    name: NetSerializer.pdb
+  - path: '**\NetSerializer.*.nupkg'
+
+#uncomment to publish to NuGet
+deploy:
+  provider: NuGet
+  api_key:
+    secure: OrhpK2cLXXcoWW+hU6xAv3eeKIbATEFbenteoFsi9EfM1yyDof6ZuNKAsA3Vy6vb
+  artifact: /.*\.nupkg/
+  
+  
+  

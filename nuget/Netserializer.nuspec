@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DotNetProjects.netserializer</id>
+    <version>$version$</version>
+    <authors>DotNetProjects</authors>
+    <owners>DotNetProjects</owners>
+    <licenseUrl>http://opensource.org/licenses/MPL</licenseUrl>
+    <projectUrl>https://github.com/dotnetprojects/netserializer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A fork of netserializer</description>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+  <files>
+    <file src="..\NetSerializer\bin\Debug\NetSerializer.dll" target="lib\net40" />
+    <file src="..\NetSerializer\bin\Debug\NetSerializer.dll" target="lib\net40" />
+  </files>
+</package>
