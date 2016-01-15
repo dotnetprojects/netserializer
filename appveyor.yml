@@ -2,6 +2,8 @@ branches:
   only:
     - master
 
+version: 4.0.{build}
+
 assembly_info:
   patch: true
   file: AssemblyInfo.*
@@ -19,8 +21,6 @@ build:
 
 after_build:
   - ps: .\nuget\pack.ps1
-
-test: on
 
 artifacts:
   - path: NetSerializer\bin\Debug\NetSerializer.dll
