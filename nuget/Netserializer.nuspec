@@ -13,6 +13,6 @@
   </metadata>
   <files>
     <file src="..\NetSerializer\bin\Debug\NetSerializer.dll" target="lib\net40" />
-    <file src="..\NetSerializer\bin\Debug\NetSerializer.dll" target="lib\net40" />
+    <file src="..\NetSerializer\bin\Debug\NetSerializer.pdb" target="lib\net40" />
   </files>
 </package>
