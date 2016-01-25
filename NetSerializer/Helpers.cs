@@ -21,7 +21,7 @@ namespace NetSerializer
 	{
 		public static IEnumerable<FieldInfo> GetFieldInfos(Type type)
 		{
-			Debug.Assert(type.IsSerializable);
+			//Debug.Assert(type.IsSerializable);
 
 			var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly)
 				.Where(fi => (fi.Attributes & FieldAttributes.NotSerialized) == 0)
